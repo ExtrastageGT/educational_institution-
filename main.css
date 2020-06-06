@@ -1,0 +1,150 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.parent {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.leftside {
+    background-color: #66CDAA;
+    flex-grow: 0.02;
+    text-align: center;
+}
+
+.rightside {
+    background-color: #f9f9f9;
+    flex-grow: 0.98;
+    overflow: auto;
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: #216091;
+    border: none;
+    color: white;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 1px;
+    cursor: pointer;
+    float: none!important;
+}
+
+.search {
+    flex-wrap: nowrap;
+}
+
+.table {
+    flex: 82%;
+    padding: 20px;
+}
+
+h2
+{
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even)
+{background-color: #f2f2f2}
+
+th {
+    background-color: #216091;
+    color: white;
+}
+
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form_field {
+    font-family: inherit;
+    width: 30%;
+    border: 0;
+    border-bottom: 2px solid #66CDAA;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 15px 22px;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.blue {
+    border-bottom: 2px solid #216091;
+}
+
+.form_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: gray;
+}
+
+.success {
+    background-color: #007E33;
+    padding: 20px;
+    color: white;
+    font-family: Arial Narrow, sans-serif;
+}
+
+.failed {
+    background-color: #c11616;
+    padding: 20px;
+    color: white;
+    font-family: Arial Narrow, sans-serif;
+}
+
+.outer {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.editable
+{
+    display: inline-block;
+    font: 300 18px/1.5 Merriweather, serif;
+    word-wrap: break-word;
+    min-width: 300px;
+    padding: 30px;
+    background-color: #f3f3f3;
+    border-radius: 3px;
+    outline: 0;
+}
+
+.icon {
+    height: 26px;
+    cursor: pointer;
+}
+
+.img-button-del-class {
+    background-color:transparent;
+    border-color:transparent;
+}
+
+.img-button-del-student {
+    background-color:transparent;
+    border-color:transparent;
+}
+
+.edit{}
