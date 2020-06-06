@@ -1,7 +1,7 @@
 <?php
 
-include '../template.php';
-include '../institute_class.php';
+include_once '../template.php';
+include_once '../institute_class.php';
 
 if (!empty($_POST))
 {

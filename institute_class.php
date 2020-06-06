@@ -15,7 +15,7 @@ class iStudent
         $servername = "localhost";
         $username = "root";
         $password = "root";
-        $dbname = "educational_institution-";
+        $dbname = "educational_institution";
 
         $this->con = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -106,17 +106,17 @@ VALUES('$this->second_name','$this->first_name', '$this->middle_name', '$this->g
         {
             while($row = mysqli_fetch_assoc($get_data))
             {
-                echo '<tr>
+                echo '<tr>';
 
-                         <td contenteditable>'.$row['second_name'].'</td>
-                         <td contenteditable>'.$row['first_name'].'</td>
-                         <td contenteditable>'.$row['middle_name'].'</td>
-                         <td contenteditable>'.$row['gender'].'</td>
-                         <td contenteditable>'.$row['birth_date'].'</td>
-                         <td contenteditable>'.$row['class'].'</td>';
-                $this->IMGButtonTD('img-button-del-student', $row['id'],'../img/minus-square-regular.png');
+                    $this->EditableDIV_TD($row['id'], $row['second_name'], 'second_name');
+                    $this->EditableDIV_TD($row['id'], $row['first_name'], 'first_name');
+                    $this->EditableDIV_TD($row['id'], $row['middle_name'], 'middle_name');
+                    $this->EditableDIV_TD($row['id'], $row['gender'], 'gender');
+                    $this->EditableDIV_TD($row['id'], $row['birth_date'], 'birth_date');
+                    $this->EditableDIV_TD($row['id'], $row['class'], 'class');
+                    $this->IMGButtonTD('img-button-del-student', $row['id'],'../img/minus-square-regular.png');
 
-                echo   '</tr>';
+                echo '</tr>';
             }
         }
     }
@@ -131,13 +131,11 @@ VALUES('$this->second_name','$this->first_name', '$this->middle_name', '$this->g
 
     function EditData()
     {
-        print_r($_POST);
-//        $fields = array('number', 'litera');
+        $fields = array('number', 'litera');
         $field = isset($_POST['filed']) ? $_POST['filed'] : '';
         print_r($_POST);
-//      print_r($_POST);
-//      if (!in_array($field, $fields)) return false;
-//      print_r($_POST);
+        if (!in_array($field, $fields)) return false;
+        print_r($_POST);
         $value = $this->TextBox_value('val');
         $id = $_POST['id'];
         mysqli_query($this->con, "UPDATE classes SET $field = '$value' WHERE id = $id");
@@ -224,4 +222,3 @@ VALUES('$this->number','$this->litera')");
         }
     }
 }
-//

@@ -3,11 +3,11 @@
 include_once '../template.php';
 include_once '../institute_class.php';
 
-if (isset($_POST['new_val']))
+if (isset($_POST['val']))
 {
     $class = new iClass();
-    $class->EditData();
-    exit();
+    if ($class->EditData()) exit("Редактирование прошло успешно!");
+    else exit("Ошибка редактирования.");
 }
 
 if (isset($_POST['delete_item']))

@@ -1,7 +1,6 @@
 <?php
 
 include 'template.php';
-//include 'institute_class.php';
 
 $template = new Template;
 $template->assign('css_path', 'main.css');

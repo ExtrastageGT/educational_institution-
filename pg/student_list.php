@@ -3,6 +3,13 @@
 include_once '../template.php';
 include_once '../institute_class.php';
 
+if (isset($_POST['val']))
+{
+    $student = new iStudent();
+    if ($student->EditData()) exit("Редактирование прошло успешно!");
+    else exit("Ошибка редактирования.");
+}
+
 if (isset($_POST['delete_item']))
 {
     $student = new iStudent();
@@ -41,5 +48,3 @@ $template->assign('rightside_content', '<div class="rows">
                     </div>
                 </div>');
 $template->render('../template_html');
-$Student = new iStudent();
-$Student->GetData(empty($_POST));
