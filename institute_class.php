@@ -18,6 +18,7 @@ class iStudent
         $dbname = "educational_institution";
 
         $this->con = mysqli_connect($servername, $username, $password, $dbname);
+        $this->con->set_charset("utf8");
 
         if (!$this->con) {
             die("Connect failed:" . mysqli_connect_error());
